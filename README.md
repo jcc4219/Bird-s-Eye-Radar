@@ -1,7 +1,7 @@
 ## mission_basic_sensor1.py
 This program is supposed to perform an autonomous mission for the drone to fly and search for trash. 
 
-* Required Python packages
+Required Python packages
 numpy: For the array calculations.
 serial: To read the serial data from the radar.
 time: To wait until more data is generated.
