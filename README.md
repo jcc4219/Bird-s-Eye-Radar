@@ -1,7 +1,7 @@
 ## mission_basic_sensor1.py
 This program is supposed to perform an autonomous mission for the drone to fly and search for trash. 
 
-* **Required Python packages**
+**Required Python packages**
  * numpy: For the array calculations.
  * serial: To read the serial data from the radar.
  * time: To wait until more data is generated.
@@ -12,7 +12,7 @@ This program is supposed to perform an autonomous mission for the drone to fly a
  * math: To do mathimatical calculations
  * dronekit: To import functions to help with mission planning in code
  
-**HOW TO USE
+**HOW TO USE**
 * Download the required packages.
 * Make all neccesary connections between raspberry pi, pixhawk 2, mmW radar, and ultrasonic sensor. Connect the usb connection from pi to mmW radar. Connect tx/rx gpio pins from pi to telemetry port of pixhawk 2.
 * Plug battery in to power all components.
