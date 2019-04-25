@@ -20,15 +20,25 @@ This program is supposed to perform an autonomous mission for the drone to fly a
 * Connect to pi with laptop through ssh
 * Run the code
 
+## readDATA2.py
+This program is a stand-alone version of the mmW sensor portion of "mission_basic_sensor1.py". It allows the user to run only the sensor without starting a mission on the drone.
+
+**Required Python packages**
+* numpy: For the array calculations.
+* serial: To read the serial data from the radar.
+* time: To wait until more data is generated.
+* array: For arrays
+* Picamera: To take images using picamera
+
+**HOW TO USE**
+* Download the required packages.
+* Connect the RaspberryPi and mmW radar sensor via USB.
+* Power both the RaspberryPi and mmW radar with their appropriate power connections (either through a wall plug or LiPo battery mounted on the drone.
+* Establish ssh connection between RaspberryPi and laptop
+* Navigate to the appropriate folder on the RaspberryPi and run the code using the command "python readDATA2.py"
 
 
-
-
-
-
-
-
-
+## Subsystem Descriptions
 Jonathan Chin - Subsystem: Drone Navigation
 Current Status: I have the communication between the pixhawk and raspberry pi working. I also have a working simulation of the projected flight path of the drone working. The drone's main base is built and a few things need to be added before flight testing.
 
