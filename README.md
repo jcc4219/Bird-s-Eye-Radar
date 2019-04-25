@@ -1,13 +1,13 @@
 ## mission_basic_sensor1.py
 This program is supposed to perform an autonomous mission for the drone to fly and search for trash. 
 
-* Required Python packages
-* **numpy**: For the array calculations.
-serial: To read the serial data from the radar.
-time: To wait until more data is generated.
-array: For arrays
-Picamera: To take images using picamera
-RPi.GPIO: For raspberry pi pins to read from sensor. 
+* **Required Python packages**
+ * numpy: For the array calculations.
+ * serial: To read the serial data from the radar.
+ * time: To wait until more data is generated.
+ * array: For arrays
+ * Picamera: To take images using picamera
+ * RPi.GPIO: For raspberry pi pins to read from sensor. 
 
 HOW TO USE
 Download the required packages.
