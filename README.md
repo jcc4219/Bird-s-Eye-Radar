@@ -37,6 +37,52 @@ This program is a stand-alone version of the mmW sensor portion of "mission_basi
 * Establish ssh connection between RaspberryPi and laptop
 * Navigate to the appropriate folder on the RaspberryPi and run the code using the command "python mmW_Trash_Detection.py"
 
+## Image Classifier and GUI
+
+################################################
+# Prework                                                                                                                                           
+################################################                                                                                                                                                                            
+# git clone https://github.com/pypa/pip                                                                                                                                                                                     
+# cd pip                                                                                                                                                                                                                    
+# sudo python setup.py install
+# sudo pip install docker-py 
+
+
+################################################
+# Steps to run and display data
+################################################
+
+1. First enable docker on mac 
+2. Then kick off automate.py using command 
+   python automate.py
+   a) Ctrl D the first time to esc the docker bash 
+3. Now need to run copy_container.py in another shell with command:
+   python copy_container.py | tee container_id.txt  
+4. Now in the docker terminal kick off the following commannds:
+   a)python retrain.py --bottleneck_dir=bottlenecks --how_many_training_steps=500 --model_dir=inception --summaries_dir=training_summaries/long --output_graph=retrained_graph.pb --output_labels=retrained_labels.txt --image_dir=trash
+   b)python label_image.py test/Test/redcup.jpg > results.log    *****Image path must match the one being passed to the gui*****
+5. From the non-docker terminal:
+   Run python copy_results.py it will copy the results into a csv file on desktop
+6. Now initiate the gui from the non docker terminal 
+   python3 main_gui_BER.py
+7. Click start and reenter the same path as in 4b) and hit Enter 
+
+
+#############################################
+# Copy a new image into the flow 
+#############################################
+1. Add new image to the test folder: 
+cp <source> /Users/Nida/tf_files_2/test/Test/.
+2. Same path can be passed to the gui
+
+#############################################
+# Retraining a new image
+#############################################
+1. Create a folder on desktop with traing images
+2. Go into /Users/tf_files/trash and add the new folder name 
+3. edit copy_container.py point to new folder
+4. Retrain 4a
+
 
 ## Subsystem Descriptions
 Jonathan Chin - Subsystem: Drone Navigation
