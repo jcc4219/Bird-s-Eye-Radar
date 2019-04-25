@@ -12,13 +12,13 @@ This program is supposed to perform an autonomous mission for the drone to fly a
  * math: To do mathimatical calculations
  * dronekit: To import functions to help with mission planning in code
  
-* **HOW TO USE
-*Download the required packages.
-*Make all neccesary connections between raspberry pi, pixhawk 2, mmW radar, and ultrasonic sensor. Connect the usb connection from pi to mmW radar. Connect tx/rx gpio pins from pi to telemetry port of pixhawk 2.
-*Plug battery in to power all components.
-*Make sure pi is connected to same wifi internet as companion computer such as a laptop.
-*Connect to pi with laptop through ssh
-*Run the code
+**HOW TO USE
+* Download the required packages.
+* Make all neccesary connections between raspberry pi, pixhawk 2, mmW radar, and ultrasonic sensor. Connect the usb connection from pi to mmW radar. Connect tx/rx gpio pins from pi to telemetry port of pixhawk 2.
+* Plug battery in to power all components.
+* Make sure pi is connected to same wifi internet as companion computer such as a laptop.
+* Connect to pi with laptop through ssh
+* Run the code
 
 
 
