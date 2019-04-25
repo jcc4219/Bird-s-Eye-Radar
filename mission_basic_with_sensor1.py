@@ -345,6 +345,8 @@ def update():
                     #print(change)
                     if (change > 0.0125 and change < 0.2):
                         print("object detected")
+			vehicle.mode = VehicleMode("GUIDED")
+	        	vehicle.airspeed = 3
                         camera.start_preview()
                         time.sleep(3)
                         camera.capture('/home/pi/Desktop/image%s.jpg' % k)
